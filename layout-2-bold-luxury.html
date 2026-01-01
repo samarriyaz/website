@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrative Wellness Partners - Elite Concierge Medicine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-purple: #1a0033;
+            --royal-purple: #4A148C;
+            --electric-blue: #2E86DE;
+            --vibrant-orange: #E67E22;
+            --emerald: #27AE60;
+            --platinum: #E5E5E5;
+            --pearl: #F8F8F8;
+            --obsidian: #0A0A0A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: var(--obsidian);
+            color: var(--platinum);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(74, 20, 140, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(46, 134, 222, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(230, 126, 34, 0.08) 0%, transparent 50%);
+            z-index: 0;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 30px 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, var(--royal-purple), var(--electric-blue), var(--vibrant-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 60px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--platinum);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--royal-purple), var(--electric-blue));
+            transform: translateX(-50%);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::before {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 60px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(74, 20, 140, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--vibrant-orange);
+            margin-bottom: 30px;
+            font-weight: 300;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--royal-purple), var(--electric-blue), var(--vibrant-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.8;
+            color: rgba(229, 229, 229, 0.7);
+            margin-bottom: 60px;
+            max-width: 650px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn-primary {
+            padding: 22px 60px;
+            background: linear-gradient(135deg, var(--royal-purple), var(--electric-blue));
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--electric-blue), var(--vibrant-orange));
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(74, 20, 140, 0.4);
+        }
+
+        .btn-secondary {
+            padding: 22px 60px;
+            background: transparent;
+            color: var(--platinum);
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--electric-blue);
+            color: var(--electric-blue);
+            box-shadow: 0 0 30px rgba(46, 134, 222, 0.3);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.1), rgba(46, 134, 222, 0.05));
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--vibrant-orange), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(229, 229, 229, 0.5);
+            font-weight: 300;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 140px 60px;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.1), rgba(46, 134, 222, 0.05));
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.2), rgba(46, 134, 222, 0.15));
+            transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(74, 20, 140, 0.3);
+            border-color: rgba(74, 20, 140, 0.3);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(229, 229, 229, 0.6);
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 140px 60px;
+            background: linear-gradient(180deg, var(--obsidian), var(--deep-purple));
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 80px;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.2), rgba(46, 134, 222, 0.1));
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 80px 60px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .pricing-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(230, 126, 34, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--electric-blue);
+            box-shadow: 0 30px 80px rgba(46, 134, 222, 0.4);
+            transform: scale(1.02);
+        }
+
+        .pricing-type {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--vibrant-orange);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-amount span {
+            font-size: 24px;
+            color: rgba(229, 229, 229, 0.5);
+        }
+
+        .pricing-note {
+            font-size: 14px;
+            color: rgba(229, 229, 229, 0.5);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(229, 229, 229, 0.7);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 60px;
+            background: var(--obsidian);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--royal-purple), var(--electric-blue), var(--vibrant-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-contact {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact a {
+            color: var(--platinum);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: var(--electric-blue);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 64px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .services-grid,
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                gap: 30px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <div class="content">
+        <nav>
+            <div class="nav-container">
+                <div class="logo">IWP</div>
+                <ul class="nav-menu">
+                    <li><a href="#services">Excellence</a></li>
+                    <li><a href="#pricing">Membership</a></li>
+                    <li><a href="#physician">Dr. Riaz</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-label">Exclusive Concierge Medicine</div>
+                    <h1>
+                        Where Science Meets
+                        <span class="gradient-text">Exceptional Care</span>
+                    </h1>
+                    <p class="hero-description">
+                        An invitation-only medical practice redefining personalized healthcare.
+                        24/7 physician access. Services delivered at your location. Prevention-focused excellence.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary"><span>Request Membership</span></a>
+                        <a href="#services" class="btn-secondary">Explore Benefits</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Physician Access</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Personalized Plans</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Waiting Rooms</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Family Members</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="services-container">
+                <h2 class="section-title">Your Membership</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Immediate Access</h3>
+                        <p>Direct communication with your physician and care team, available around the clock, every day of the year.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Specialist Navigation</h3>
+                        <p>We coordinate all referrals and accompany you to specialist appointments, ensuring seamless care.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⏱️</div>
+                        <h3>Priority Scheduling</h3>
+                        <p>Same-day and next-day appointments. Telehealth options for when you're traveling.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🧬</div>
+                        <h3>Preventative Medicine</h3>
+                        <p>Comprehensive treatment plans with regular blood work and personalized lifestyle optimization.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Location Flexibility</h3>
+                        <p>All services—from blood draws to x-rays—delivered wherever you are most comfortable.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Family Wellness</h3>
+                        <p>Complete care for your entire family, including pediatric and women's health services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="pricing-container">
+                <h2 class="section-title">Membership Investment</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <div class="pricing-type">Individual</div>
+                        <div class="pricing-amount">$500<span>/mo</span></div>
+                        <p class="pricing-note">Elite concierge care for one</p>
+                        <ul class="pricing-features">
+                            <li>24/7 physician access</li>
+                            <li>Same-day appointments</li>
+                            <li>Preventative care plans</li>
+                            <li>In-location services</li>
+                            <li>No initiation fee</li>
+                            <li>No annual contract</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary"><span>Begin Application</span></a>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-type">Family</div>
+                        <div class="pricing-amount">$1000<span>/mo</span></div>
+                        <p class="pricing-note">Unlimited family members</p>
+                        <ul class="pricing-features">
+                            <li>Everything in Individual</li>
+                            <li>Unlimited children</li>
+                            <li>Pediatric specialists</li>
+                            <li>Family care coordination</li>
+                            <li>Well-child visits</li>
+                            <li>Sports physicals</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary"><span>Begin Application</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-container">
+                <div class="footer-logo">Integrative Wellness Partners</div>
+                <div class="footer-contact">
+                    <a href="tel:480.508.7050">480.508.7050</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:Info@iwellnesspartners.com">Info@iwellnesspartners.com</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

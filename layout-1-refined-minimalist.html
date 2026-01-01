@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrative Wellness Partners - Concierge Medicine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FDFBF7;
+            --charcoal: #2C2C2C;
+            --purple: #4A148C;
+            --orange: #E67E22;
+            --blue: #2E86DE;
+            --green: #27AE60;
+            --gold: #C9A961;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* DNA Helix Watermark */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(74, 20, 140, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(230, 126, 34, 0.03) 0%, transparent 50%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, -30px) rotate(5deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--purple);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .accent {
+            font-weight: 600;
+            font-style: italic;
+            background: linear-gradient(135deg, var(--purple), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: rgba(44, 44, 44, 0.7);
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: var(--charcoal);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--purple), var(--blue));
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 100px 0;
+            border-top: 1px solid rgba(44, 44, 44, 0.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header .line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .service-item:nth-child(1) { animation-delay: 0.1s; }
+        .service-item:nth-child(2) { animation-delay: 0.2s; }
+        .service-item:nth-child(3) { animation-delay: 0.3s; }
+        .service-item:nth-child(4) { animation-delay: 0.4s; }
+        .service-item:nth-child(5) { animation-delay: 0.5s; }
+        .service-item:nth-child(6) { animation-delay: 0.6s; }
+
+        .service-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .service-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(44, 44, 44, 0.6);
+            font-weight: 300;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.03), rgba(46, 134, 222, 0.03));
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--cream);
+            padding: 60px 50px;
+            border: 1px solid rgba(44, 44, 44, 0.1);
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .pricing-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .price span {
+            font-size: 20px;
+            color: rgba(44, 44, 44, 0.5);
+        }
+
+        .pricing-card .note {
+            font-size: 13px;
+            color: rgba(44, 44, 44, 0.5);
+            margin-bottom: 30px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 2;
+            color: rgba(44, 44, 44, 0.7);
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .about-text p {
+            margin-bottom: 30px;
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 50px;
+            color: var(--purple);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+
+        .contact h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: var(--cream);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .services-grid,
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Integrative Wellness Partners</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Membership</a></li>
+                    <li><a href="#about">Physician</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>
+                The Art of<br>
+                <span class="accent">Personalized Medicine</span>
+            </h1>
+            <p>
+                An exclusive concierge practice dedicated to your optimal health.
+                24/7 access to exceptional care, delivered wherever you are.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn">Begin Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membership Includes</h2>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-number">01</div>
+                    <h3>24/7 Direct Access</h3>
+                    <p>Immediate communication with your dedicated physician and care team, whenever you need us.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">02</div>
+                    <h3>Specialist Coordination</h3>
+                    <p>We accompany you to appointments and manage all specialist referrals with meticulous care.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">03</div>
+                    <h3>Same-Day Visits</h3>
+                    <p>Same and next-day appointments, plus telehealth options for patients traveling out of state.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">04</div>
+                    <h3>Preventative Focus</h3>
+                    <p>Comprehensive treatment plans including regular blood tests and personalized lifestyle guidance.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">05</div>
+                    <h3>In-Location Services</h3>
+                    <p>From blood draws to x-rays, all services delivered at your preferred location.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">06</div>
+                    <h3>Family Wellness</h3>
+                    <p>Well child checks, well women exams, and comprehensive care for the entire family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Membership Options</h2>
+                <div class="line"></div>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Individual</h3>
+                    <div class="price">$500<span>/month</span></div>
+                    <p class="note">Dedicated concierge care for you</p>
+                    <a href="#contact" class="btn">Inquire</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Family</h3>
+                    <div class="price">$1000<span>/month</span></div>
+                    <p class="note">Unlimited family members</p>
+                    <a href="#contact" class="btn">Inquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Your Physician</h2>
+                <div class="about-text">
+                    <p>
+                        Dr. Samar Riaz, NMD, brings a rare combination of scientific rigor and compassionate care
+                        to her concierge practice. Graduating Summa Cum Laude from Sonoran University, she discovered
+                        her calling in integrative medicine after witnessing the healthcare system's failure to prioritize
+                        prevention.
+                    </p>
+                    <p>
+                        Her patients describe a close bond built on mutual respect and trust. Dr. Riaz believes in
+                        empowering you to take control of your health journey, providing all available options
+                        while respecting your decisions every step of the way.
+                    </p>
+                </div>
+                <div class="signature">Dr. Samar Riaz, NMD</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Begin Your Wellness Journey</h2>
+            <div class="contact-info">
+                <a href="tel:480.508.7050">480.508.7050</a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:Info@iwellnesspartners.com">Info@iwellnesspartners.com</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "wix-mcp": {
+      "type": "http",
+      "url": "https://mcp.wix.com/mcp",
+      "headers": {
+        "Authorization": "IST.eyJraWQiOiJQb3pIX2FDMiIsImFsZyI6IlJTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjUzODFlOGI1LWQ0MDctNDkzNy04NDRkLWQ1NjllNzQxYTRkYVwiLFwiaWRlbnRpdHlcIjp7XCJ0eXBlXCI6XCJhcHBsaWNhdGlvblwiLFwiaWRcIjpcIjViYTJlMWNkLTA4MjAtNDhkYS1iNjE1LTBmMDc5MWI1ZGM1OVwifSxcInRlbmFudFwiOntcInR5cGVcIjpcImFjY291bnRcIixcImlkXCI6XCI0MTdlZjY0NC1kMjJmLTRmNmUtYWUyMi01NjkxM2I4ODdkNjJcIn19IiwiaWF0IjoxNzY3MjM5NTY1fQ.Rwi4Z1LcWydvWjChlpCe01_1HpqbKjFszua8ZSYXQF2Nm-JsjotDbxE7DhDN3gz8alarXpaZ8BsgbAwEIXuao-A-J43uTa4RzT5cjNcRoihHIedtUBM28Bjot1HV0g1_CBsu3iMTWCLRnFAuTrpCLIErVhoZElg6-C-3jksIWZqMEUhWZlB2GSjkOYSe2TUZ-Q0zPP5sbfgVDCpRysAwAxdin1b0N8ZZDXWM73Wbo2bE0L_d8usRGB4V-aZNLpg4LUMdDC6tAfyNOGeHxdYfO08hGSDgQ7wRR33P0wWv0btYu6dvEI_w8BZQh3cLW33i8a9FVlbwrnqzXZVeyKxP5w",
+	"wix-account-id": "417ef644-d22f-4f6e-ae22-56913b887d62"
+      }
+    }
+  }
+}

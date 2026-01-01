@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrative Wellness Partners - Concierge Medicine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #1A1F2E;
+            --charcoal: #2D3142;
+            --slate: #4F5D75;
+            --warm-stone: #BFC0C0;
+            --ivory: #FAFAF9;
+            --off-white: #F5F5F4;
+            --accent-plum: #5B4B8A;
+            --soft-copper: #B8846C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--ivory);
+            color: var(--deep-navy);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 250, 249, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(45, 49, 66, 0.08);
+            z-index: 1000;
+            padding: 28px 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 42px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 48px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            transition: color 0.25s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-plum);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-plum);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px 100px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 120px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 640px;
+        }
+
+        .hero-eyebrow {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--soft-copper);
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.15;
+            margin-bottom: 32px;
+            color: var(--deep-navy);
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent-plum);
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--slate);
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: var(--deep-navy);
+            color: var(--ivory);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+
+        .hero-cta:hover {
+            background: var(--accent-plum);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(91, 75, 138, 0.15);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 560px;
+            background: linear-gradient(135deg,
+                rgba(91, 75, 138, 0.04) 0%,
+                rgba(184, 132, 108, 0.03) 100%);
+            border: 1px solid rgba(45, 49, 66, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(91, 75, 138, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-visual-logo {
+            max-width: 100%;
+            height: auto;
+            max-height: 280px;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: var(--off-white);
+            padding: 100px 60px;
+            border-top: 1px solid rgba(45, 49, 66, 0.08);
+            border-bottom: 1px solid rgba(45, 49, 66, 0.08);
+        }
+
+        .quote-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .quote {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 32px;
+            line-height: 1.6;
+            font-style: italic;
+            color: var(--charcoal);
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+
+        .quote-attribution {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: var(--slate);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px;
+        }
+
+        .section-header {
+            max-width: 720px;
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            color: var(--deep-navy);
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+        }
+
+        .section-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--slate);
+            font-weight: 300;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            row-gap: 72px;
+        }
+
+        .service-card {
+            position: relative;
+            padding-top: 24px;
+        }
+
+        .service-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px;
+            color: rgba(91, 75, 138, 0.06);
+            position: absolute;
+            top: -16px;
+            left: -8px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-title {
+            font-size: 20px;
+            color: var(--deep-navy);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .service-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--slate);
+            font-weight: 300;
+        }
+
+        /* Physician Section */
+        .physician {
+            background: var(--deep-navy);
+            color: var(--ivory);
+            padding: 120px 60px;
+        }
+
+        .physician-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 100px;
+            align-items: start;
+        }
+
+        .physician-info {
+            position: sticky;
+            top: 120px;
+        }
+
+        .physician-name {
+            font-size: 40px;
+            margin-bottom: 16px;
+            color: var(--ivory);
+        }
+
+        .physician-credentials {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: var(--warm-stone);
+            margin-bottom: 36px;
+            font-weight: 400;
+        }
+
+        .physician-quote {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 17px;
+            line-height: 1.7;
+            font-style: italic;
+            color: var(--soft-copper);
+            padding-left: 24px;
+            border-left: 2px solid var(--soft-copper);
+        }
+
+        .physician-bio {
+            font-size: 16px;
+            line-height: 1.85;
+            color: rgba(250, 250, 249, 0.85);
+            font-weight: 300;
+        }
+
+        .physician-bio p {
+            margin-bottom: 28px;
+        }
+
+        .physician-bio strong {
+            color: var(--ivory);
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--off-white);
+            padding: 100px 60px;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 36px;
+            margin-bottom: 48px;
+            color: var(--deep-navy);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 64px;
+            margin-bottom: 48px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .contact-value {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 19px;
+        }
+
+        .contact-value a {
+            color: var(--deep-navy);
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--accent-plum);
+        }
+
+        .contact-note {
+            font-size: 14px;
+            color: var(--slate);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 60px;
+            background: var(--ivory);
+            border-top: 1px solid rgba(45, 49, 66, 0.08);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 36px;
+            width: auto;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: var(--slate);
+            letter-spacing: 0.3px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                padding: 80px 40px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .physician-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .physician-info {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 30px;
+            }
+
+            .nav-menu {
+                gap: 32px;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .services {
+                padding: 80px 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .physician {
+                padding: 80px 30px;
+            }
+
+            .contact {
+                padding: 80px 30px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            footer {
+                padding: 40px 30px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="docs/IWP-LOGO.png" alt="Integrative Wellness Partners" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#approach">Our Approach</a></li>
+                <li><a href="#physician">Dr. Riaz</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Concierge Medicine</div>
+            <h1>
+                Medicine as it was<br>
+                <em>meant to be</em>
+            </h1>
+            <p class="hero-description">
+                A return to the fundamentals of healthcare: time, attention, and a physician who truly knows you.
+                Our concierge practice offers exclusive access to integrative medicine designed around your life.
+            </p>
+            <a href="#contact" class="hero-cta">Request Membership</a>
+        </div>
+        <div class="hero-visual">
+            <img src="docs/IWP-LOGO.png" alt="DNA Helix - Integrative Wellness Partners" class="hero-visual-logo">
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="quote-container">
+            <blockquote class="quote">
+                "I want my patients to feel empowered and in control of their health.
+                My plans are focused on setting them up for success."
+            </blockquote>
+            <p class="quote-attribution">Dr. Samar Riaz, NMD</p>
+        </div>
+    </section>
+
+    <section class="services" id="approach">
+        <div class="section-header">
+            <div class="section-label">What's Included</div>
+            <h2 class="section-title">A Complete Approach to Your Wellness</h2>
+            <p class="section-description">
+                Every aspect of our service is designed to prioritize your convenience, health, and peace of mind.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <div class="service-content">
+                    <h3 class="service-title">Always Available</h3>
+                    <p class="service-description">
+                        24/7 direct communication with your physician and care team. We're here when you need us.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <div class="service-content">
+                    <h3 class="service-title">Specialist Navigation</h3>
+                    <p class="service-description">
+                        We coordinate all referrals and accompany you to appointments—virtually or in person—at your request.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <div class="service-content">
+                    <h3 class="service-title">Immediate Care</h3>
+                    <p class="service-description">
+                        Same-day and next-day appointments. Telehealth available wherever you are, including out of state.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">04</div>
+                <div class="service-content">
+                    <h3 class="service-title">Prevention First</h3>
+                    <p class="service-description">
+                        Comprehensive treatment plans with regular blood work every 6-12 weeks, plus personalized recommendations for diet, supplements, and lifestyle choices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">05</div>
+                <div class="service-content">
+                    <h3 class="service-title">Your Location</h3>
+                    <p class="service-description">
+                        All services delivered where you're most comfortable—from blood draws to x-rays, we come to you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">06</div>
+                <div class="service-content">
+                    <h3 class="service-title">Family Care</h3>
+                    <p class="service-description">
+                        Well-child checks, well-women exams, minor procedures, and sports physicals for the entire family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="physician" id="physician">
+        <div class="physician-container">
+            <div class="physician-info">
+                <h2 class="physician-name">Dr. Samar Riaz</h2>
+                <p class="physician-credentials">NMD, Summa Cum Laude</p>
+                <p class="physician-quote">
+                    "Being a strong advocate for my patients and going above and beyond for their well-being."
+                </p>
+            </div>
+            <div class="physician-bio">
+                <p>
+                    Dr. Riaz's journey into naturopathic medicine began with a profound realization during her undergraduate
+                    studies: the medical system was failing young patients who lacked access to preventative care. After
+                    witnessing young diabetic patients admitted for preventable complications, she knew there had to be a better way.
+                </p>
+                <p>
+                    <strong>Integrative medicine became that answer.</strong> It offered the best of both worlds—the ability
+                    to focus on diet, exercise, and mental health while maintaining the credentials to prescribe medications
+                    when needed. This approach allows her to provide truly comprehensive care.
+                </p>
+                <p>
+                    Her philosophy centers on <strong>informed consent and patient empowerment</strong>. Whether supporting
+                    a breast cancer patient's decision to take hormone blockers or helping families navigate developmental
+                    health challenges, Dr. Riaz provides options and respects autonomy.
+                </p>
+                <p>
+                    Patients consistently describe feeling heard and respected. Her years working with children with
+                    developmental disorders have taught her to provide compassionate care to those who may be fearful.
+                    Her unique perspective—informed by her husband's decade-long career as a professional MMA fighter—has
+                    deepened her ability to care for patients under immense pressure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Let's Begin</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-label">Call</div>
+                    <div class="contact-value">
+                        <a href="tel:480.508.7050">480.508.7050</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:Info@iwellnesspartners.com">Info@iwellnesspartners.com</a>
+                    </div>
+                </div>
+            </div>
+            <p class="contact-note">
+                We look forward to building a lasting relationship focused on your optimal health.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <img src="docs/IWP-LOGO.png" alt="Integrative Wellness Partners" class="footer-logo">
+            <div class="footer-text">Exclusive Concierge Medicine</div>
+        </div>
+    </footer>
+</body>
+</html>
