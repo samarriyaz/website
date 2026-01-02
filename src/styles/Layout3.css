@@ -338,7 +338,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
-    gap: 120px;
+    gap: 80px;
     align-items: start;
 }
 
@@ -370,11 +370,11 @@
 }
 
 .layout3-physician-credentials {
-    font-size: 14px;
-    letter-spacing: 0.8px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
     color: var(--warm-stone);
     margin-bottom: 40px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .layout3-physician-quote {
