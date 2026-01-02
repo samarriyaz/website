@@ -196,6 +196,38 @@ const Layout3 = () => {
               </div>
             </div>
           </div>
+
+          {/* Dawn Williams */}
+          <div className="layout3-team-member">
+            <div className="layout3-team-member-image-wrapper">
+              <img src="/dawn-williams-profile.jpeg" alt="Dawn Williams, Medical Office Coordinator" className="layout3-team-member-image" />
+            </div>
+            <div className="layout3-team-member-content">
+              <h3 className="layout3-team-member-name">Dawn Williams</h3>
+              <p className="layout3-team-member-credentials">Medical Office Coordinator</p>
+              <div className="layout3-team-member-bio">
+                <p>
+                  Dawn is a dedicated member of our team, ensuring smooth operations and exceptional patient experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Jay Bhatnagar */}
+          <div className="layout3-team-member">
+            <div className="layout3-team-member-image-wrapper">
+              <img src="/jay-bhatnagar-profile.jpeg" alt="Jay Bhatnagar, Medical Scribe" className="layout3-team-member-image" />
+            </div>
+            <div className="layout3-team-member-content">
+              <h3 className="layout3-team-member-name">Jay Bhatnagar</h3>
+              <p className="layout3-team-member-credentials">Medical Scribe</p>
+              <div className="layout3-team-member-bio">
+                <p>
+                  Jay provides essential support to our medical team, ensuring accurate and thorough documentation.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
