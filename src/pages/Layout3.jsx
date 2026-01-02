@@ -133,7 +133,7 @@ const Layout3 = () => {
               <img src="/dr-riaz-profile.jpeg" alt="Dr. Samar Riaz, NMD" className="layout3-physician-image" />
             </div>
             <h2 className="layout3-physician-name">Dr. Samar Riaz</h2>
-            <p className="layout3-physician-credentials">NMD, Summa Cum Laude</p>
+            <p className="layout3-physician-credentials">NMD</p>
             <p className="layout3-physician-quote">
               "Being a strong advocate for my patients and going above and beyond for their well-being."
             </p>
