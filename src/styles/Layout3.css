@@ -372,9 +372,7 @@
 
 .layout3-team-member-image {
     width: 360px;
-    height: 360px;
-    object-fit: cover;
-    object-position: center top;
+    height: auto;
     border-radius: 8px;
     border: 3px solid rgba(184, 132, 108, 0.3);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
@@ -664,7 +662,7 @@
 
     .layout3-team-member-image {
         width: 300px;
-        height: 300px;
+        height: auto;
     }
 
     .layout3-team-member-image-wrapper {
