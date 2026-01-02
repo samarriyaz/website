@@ -326,33 +326,51 @@
     font-weight: 400;
 }
 
-/* Physician Section */
-.layout3-physician {
+/* Team Section */
+.layout3-team {
     background: var(--deep-navy);
     color: var(--ivory);
     padding: 140px 80px;
 }
 
-.layout3-physician-container {
+.layout3-team-header {
     max-width: 1440px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.layout3-team-header .layout3-section-title {
+    color: var(--ivory);
+    margin-bottom: 24px;
+}
+
+.layout3-team-header .layout3-section-description {
+    color: rgba(250, 250, 249, 0.75);
+    max-width: 640px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 120px;
-    align-items: start;
 }
 
-.layout3-physician-info {
-    position: sticky;
-    top: 140px;
+.layout3-team-members {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
-.layout3-physician-image-wrapper {
-    margin-bottom: 40px;
+.layout3-team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.layout3-team-member-image-wrapper {
     position: relative;
+    margin-bottom: 32px;
 }
 
-.layout3-physician-image {
+.layout3-team-member-image {
     width: 100%;
     max-width: 360px;
     height: auto;
@@ -362,43 +380,52 @@
     display: block;
 }
 
-.layout3-physician-name {
-    font-size: 46px;
-    margin-bottom: 18px;
+.layout3-team-member-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout3-team-member-name {
+    font-size: 42px;
+    margin-bottom: 12px;
     color: var(--ivory);
     letter-spacing: -0.5px;
+    font-family: 'Libre Baskerville', serif;
 }
 
-.layout3-physician-credentials {
-    font-size: 14px;
-    letter-spacing: 0.8px;
+.layout3-team-member-credentials {
+    font-size: 20px;
+    letter-spacing: 0.5px;
     color: var(--warm-stone);
-    margin-bottom: 40px;
-    font-weight: 500;
+    margin-bottom: 32px;
+    font-weight: 400;
 }
 
-.layout3-physician-quote {
+.layout3-team-member-quote {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
     line-height: 1.7;
     font-style: italic;
     color: var(--soft-copper);
-    padding-left: 28px;
-    border-left: 3px solid var(--soft-copper);
+    padding: 0 40px;
+    margin-bottom: 36px;
+    max-width: 700px;
 }
 
-.layout3-physician-bio {
-    font-size: 17px;
+.layout3-team-member-bio {
+    font-size: 16px;
     line-height: 1.85;
     color: rgba(250, 250, 249, 0.88);
     font-weight: 400;
+    max-width: 700px;
+    text-align: left;
 }
 
-.layout3-physician-bio p {
-    margin-bottom: 32px;
+.layout3-team-member-bio p {
+    margin-bottom: 28px;
 }
 
-.layout3-physician-bio strong {
+.layout3-team-member-bio strong {
     color: var(--ivory);
     font-weight: 600;
 }
@@ -468,7 +495,7 @@
 
 /* Footer */
 .layout3-footer {
-    padding: 56px 80px;
+    padding: 56px 80px 40px;
     background: var(--ivory);
     border-top: 1px solid rgba(45, 49, 66, 0.1);
 }
@@ -479,6 +506,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .layout3-footer-logo {
@@ -492,6 +520,26 @@
     color: var(--slate);
     letter-spacing: 0.5px;
     font-weight: 500;
+}
+
+.layout3-footer-privacy {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(45, 49, 66, 0.06);
+}
+
+.layout3-footer-privacy-text {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--slate);
+    text-align: center;
+    opacity: 0.85;
+}
+
+.layout3-footer-privacy-text strong {
+    font-weight: 600;
+    color: var(--charcoal);
 }
 
 /* Responsive Design */
@@ -529,17 +577,12 @@
         row-gap: 70px;
     }
 
-    .layout3-physician {
+    .layout3-team {
         padding: 100px 50px;
     }
 
-    .layout3-physician-container {
-        grid-template-columns: 1fr;
-        gap: 70px;
-    }
-
-    .layout3-physician-info {
-        position: static;
+    .layout3-team-members {
+        gap: 80px;
     }
 
     .layout3-contact {
@@ -606,22 +649,41 @@
         row-gap: 60px;
     }
 
-    .layout3-physician {
+    .layout3-team {
         padding: 100px 32px;
     }
 
-    .layout3-physician-image {
-        max-width: 280px;
-        margin: 0 auto;
+    .layout3-team-header {
+        margin-bottom: 80px;
     }
 
-    .layout3-physician-image-wrapper {
-        text-align: center;
-        margin-bottom: 32px;
+    .layout3-team-members {
+        gap: 70px;
     }
 
-    .layout3-physician-name {
-        font-size: 38px;
+    .layout3-team-member-image {
+        max-width: 300px;
+    }
+
+    .layout3-team-member-image-wrapper {
+        margin-bottom: 28px;
+    }
+
+    .layout3-team-member-name {
+        font-size: 32px;
+    }
+
+    .layout3-team-member-credentials {
+        font-size: 18px;
+    }
+
+    .layout3-team-member-quote {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .layout3-team-member-bio {
+        padding: 0 20px;
     }
 
     .layout3-contact {
@@ -638,12 +700,20 @@
     }
 
     .layout3-footer {
-        padding: 48px 32px;
+        padding: 48px 32px 32px;
     }
 
     .layout3-footer-container {
         flex-direction: column;
         gap: 24px;
         text-align: center;
+    }
+
+    .layout3-footer-privacy {
+        padding: 24px 16px 0;
+    }
+
+    .layout3-footer-privacy-text {
+        font-size: 10px;
     }
 }
