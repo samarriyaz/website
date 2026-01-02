@@ -177,6 +177,20 @@ const Layout3 = () => {
                 <a href="mailto:Info@iwellnesspartners.com">Info@iwellnesspartners.com</a>
               </div>
             </div>
+            <div className="layout3-contact-item">
+              <div className="layout3-contact-label">Address</div>
+              <div className="layout3-contact-value">
+                <a href="https://maps.google.com/?q=2375+E+Camelback+Road+Ste+600,+Phoenix,+Arizona+85016" target="_blank" rel="noopener noreferrer">
+                  2375 E Camelback Road<br />Ste 600<br />Phoenix, Arizona 85016
+                </a>
+              </div>
+            </div>
+            <div className="layout3-contact-item">
+              <div className="layout3-contact-label">Fax</div>
+              <div className="layout3-contact-value">
+                <a href="tel:855.535.9242">855.535.9242</a>
+              </div>
+            </div>
           </div>
           <p className="layout3-contact-note">
             We look forward to building a lasting relationship focused on your optimal health.
