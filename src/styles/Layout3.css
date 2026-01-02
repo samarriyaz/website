@@ -114,7 +114,6 @@
     gap: 100px;
     align-items: center;
     min-height: calc(100vh - 132px);
-    background: var(--deep-navy);
 }
 
 .layout3-hero-content {
@@ -136,7 +135,7 @@
     font-size: 68px;
     line-height: 1.1;
     margin-bottom: 36px;
-    color: var(--ivory);
+    color: var(--deep-navy);
     letter-spacing: -1px;
 }
 
@@ -149,7 +148,7 @@
 .layout3-hero-description {
     font-size: 19px;
     line-height: 1.75;
-    color: rgba(250, 250, 249, 0.85);
+    color: var(--slate);
     margin-bottom: 52px;
     font-weight: 400;
     max-width: 580px;
@@ -160,7 +159,7 @@
     align-items: center;
     gap: 12px;
     padding: 18px 42px;
-    background: var(--accent-plum);
+    background: var(--deep-navy);
     color: var(--ivory);
     text-decoration: none;
     font-size: 15px;
@@ -170,13 +169,13 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(91, 75, 138, 0.3);
+    box-shadow: 0 4px 12px rgba(26, 31, 46, 0.12);
 }
 
 .layout3-hero-cta:hover {
-    background: var(--soft-copper);
+    background: var(--accent-plum);
     transform: translateY(-3px);
-    box-shadow: 0 16px 32px rgba(184, 132, 108, 0.4);
+    box-shadow: 0 16px 32px rgba(91, 75, 138, 0.2);
 }
 
 .layout3-hero-visual {
@@ -648,24 +647,23 @@
 }
 
 .layout3-footer-privacy {
-    max-width: 100%;
-    margin: 0 -80px -40px;
-    padding: 32px 80px;
-    background: var(--deep-navy);
-    border-top: none;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(45, 49, 66, 0.06);
 }
 
 .layout3-footer-privacy-text {
     font-size: 11px;
     line-height: 1.6;
-    color: rgba(250, 250, 249, 0.75);
+    color: var(--slate);
     text-align: center;
-    opacity: 1;
+    opacity: 0.85;
 }
 
 .layout3-footer-privacy-text strong {
     font-weight: 600;
-    color: var(--ivory);
+    color: var(--charcoal);
 }
 
 /* Responsive Design */
@@ -855,8 +853,7 @@
     }
 
     .layout3-footer-privacy {
-        margin: 0 -32px -32px;
-        padding: 24px 32px;
+        padding: 24px 16px 0;
     }
 
     .layout3-footer-privacy-text {
