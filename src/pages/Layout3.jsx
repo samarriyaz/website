@@ -130,7 +130,7 @@ const Layout3 = () => {
         <div className="layout3-physician-container">
           <div className="layout3-physician-info">
             <div className="layout3-physician-image-wrapper">
-              <img src="/dr-riaz-profile.jpg" alt="Dr. Samar Riaz, NMD" className="layout3-physician-image" />
+              <img src="/dr-riaz-profile.jpeg" alt="Dr. Samar Riaz, NMD" className="layout3-physician-image" />
             </div>
             <h2 className="layout3-physician-name">Dr. Samar Riaz</h2>
             <p className="layout3-physician-credentials">NMD, Summa Cum Laude</p>
