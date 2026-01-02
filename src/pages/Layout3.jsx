@@ -18,7 +18,7 @@ const Layout3 = () => {
           </div>
           <ul className="layout3-nav-menu">
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
-            <li><a href="#physician" onClick={(e) => { e.preventDefault(); scrollToSection('physician'); }}>About Dr. Riaz</a></li>
+            <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
           </ul>
         </div>
@@ -126,40 +126,75 @@ const Layout3 = () => {
         </div>
       </section>
 
-      <section className="layout3-physician" id="physician">
-        <div className="layout3-physician-container">
-          <div className="layout3-physician-info">
-            <div className="layout3-physician-image-wrapper">
-              <img src="/dr-riaz-profile.jpeg" alt="Dr. Samar Riaz, NMD" className="layout3-physician-image" />
+      <section className="layout3-team" id="team">
+        <div className="layout3-team-header">
+          <h2 className="layout3-section-title">Our Team</h2>
+          <p className="layout3-section-description">
+            Meet the dedicated professionals committed to your health and wellbeing.
+          </p>
+        </div>
+
+        <div className="layout3-team-members">
+          {/* Dr. Samar Riaz */}
+          <div className="layout3-team-member">
+            <div className="layout3-team-member-image-wrapper">
+              <img src="/dr-riaz-profile.jpeg" alt="Dr. Samar Riaz, NMD" className="layout3-team-member-image" />
             </div>
-            <h2 className="layout3-physician-name">Dr. Samar Riaz</h2>
-            <p className="layout3-physician-credentials">NMD</p>
-            <p className="layout3-physician-quote">
-              "Being a strong advocate for my patients and going above and beyond for their well-being."
-            </p>
+            <div className="layout3-team-member-content">
+              <h3 className="layout3-team-member-name">Dr. Samar Riaz</h3>
+              <p className="layout3-team-member-credentials">NMD</p>
+              <p className="layout3-team-member-quote">
+                "Being a strong advocate for my patients and going above and beyond for their well-being."
+              </p>
+              <div className="layout3-team-member-bio">
+                <p>
+                  Dr. Riaz's journey into naturopathic medicine began with a profound realization during her undergraduate
+                  studies: the medical system was failing young patients who lacked access to preventative care. After
+                  witnessing young diabetic patients admitted for preventable complications, she knew there had to be a better way.
+                </p>
+                <p>
+                  <strong>Integrative medicine became that answer.</strong> It offered the best of both worlds—the ability
+                  to focus on diet, exercise, and mental health while maintaining the credentials to prescribe medications
+                  when needed. This approach allows her to provide truly comprehensive care.
+                </p>
+                <p>
+                  Her philosophy centers on <strong>informed consent and patient empowerment</strong>. Whether supporting
+                  a breast cancer patient's decision to take hormone blockers or helping families navigate developmental
+                  health challenges, Dr. Riaz provides options and respects autonomy.
+                </p>
+                <p>
+                  Patients consistently describe feeling heard and respected. Her years working with children with
+                  developmental disorders have taught her to provide compassionate care to those who may be fearful.
+                  Her unique perspective—informed by her husband's decade-long career as a professional MMA fighter—has
+                  deepened her ability to care for patients under immense pressure.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="layout3-physician-bio">
-            <p>
-              Dr. Riaz's journey into naturopathic medicine began with a profound realization during her undergraduate
-              studies: the medical system was failing young patients who lacked access to preventative care. After
-              witnessing young diabetic patients admitted for preventable complications, she knew there had to be a better way.
-            </p>
-            <p>
-              <strong>Integrative medicine became that answer.</strong> It offered the best of both worlds—the ability
-              to focus on diet, exercise, and mental health while maintaining the credentials to prescribe medications
-              when needed. This approach allows her to provide truly comprehensive care.
-            </p>
-            <p>
-              Her philosophy centers on <strong>informed consent and patient empowerment</strong>. Whether supporting
-              a breast cancer patient's decision to take hormone blockers or helping families navigate developmental
-              health challenges, Dr. Riaz provides options and respects autonomy.
-            </p>
-            <p>
-              Patients consistently describe feeling heard and respected. Her years working with children with
-              developmental disorders have taught her to provide compassionate care to those who may be fearful.
-              Her unique perspective—informed by her husband's decade-long career as a professional MMA fighter—has
-              deepened her ability to care for patients under immense pressure.
-            </p>
+
+          {/* Maggie Young */}
+          <div className="layout3-team-member">
+            <div className="layout3-team-member-image-wrapper">
+              <img src="/maggie-young-profile.jpeg" alt="Maggie Young, RN, BSN" className="layout3-team-member-image" />
+            </div>
+            <div className="layout3-team-member-content">
+              <h3 className="layout3-team-member-name">Maggie Young</h3>
+              <p className="layout3-team-member-credentials">RN, BSN</p>
+              <div className="layout3-team-member-bio">
+                <p>
+                  Maggie is an Arizona native with a passion for building meaningful connections with her patients. She earned
+                  her Bachelor of Science in Public Health from the University of Hawaii and her Bachelor of Science in Nursing
+                  from Creighton University.
+                </p>
+                <p>
+                  What drew Maggie to nursing was her love of helping others and the opportunity to truly get to know her patients.
+                  She believes that strong relationships are at the heart of great care.
+                </p>
+                <p>
+                  Outside of work, Maggie enjoys spending time with friends and family and coaches cheerleading at a local high school.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
