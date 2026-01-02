@@ -351,39 +351,28 @@
 }
 
 .layout3-team-members {
-    max-width: 1440px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 100px;
 }
 
 .layout3-team-member {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 80px;
-    align-items: start;
-}
-
-.layout3-team-member:nth-child(even) {
-    grid-template-columns: 1.15fr 0.85fr;
-}
-
-.layout3-team-member:nth-child(even) .layout3-team-member-image-wrapper {
-    order: 2;
-}
-
-.layout3-team-member:nth-child(even) .layout3-team-member-content {
-    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .layout3-team-member-image-wrapper {
     position: relative;
+    margin-bottom: 32px;
 }
 
 .layout3-team-member-image {
     width: 100%;
-    max-width: 420px;
+    max-width: 360px;
     height: auto;
     border-radius: 8px;
     border: 3px solid rgba(184, 132, 108, 0.3);
@@ -414,13 +403,13 @@
 
 .layout3-team-member-quote {
     font-family: 'Libre Baskerville', serif;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.7;
     font-style: italic;
     color: var(--soft-copper);
-    padding-left: 28px;
-    border-left: 3px solid var(--soft-copper);
+    padding: 0 40px;
     margin-bottom: 36px;
+    max-width: 700px;
 }
 
 .layout3-team-member-bio {
@@ -428,6 +417,8 @@
     line-height: 1.85;
     color: rgba(250, 250, 249, 0.88);
     font-weight: 400;
+    max-width: 700px;
+    text-align: left;
 }
 
 .layout3-team-member-bio p {
@@ -590,21 +581,8 @@
         padding: 100px 50px;
     }
 
-    .layout3-team-member {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .layout3-team-member:nth-child(even) {
-        grid-template-columns: 1fr;
-    }
-
-    .layout3-team-member:nth-child(even) .layout3-team-member-image-wrapper {
-        order: 0;
-    }
-
-    .layout3-team-member:nth-child(even) .layout3-team-member-content {
-        order: 0;
+    .layout3-team-members {
+        gap: 80px;
     }
 
     .layout3-contact {
@@ -680,28 +658,32 @@
     }
 
     .layout3-team-members {
-        gap: 80px;
-    }
-
-    .layout3-team-member {
-        gap: 40px;
+        gap: 70px;
     }
 
     .layout3-team-member-image {
-        max-width: 320px;
-        margin: 0 auto;
+        max-width: 300px;
     }
 
     .layout3-team-member-image-wrapper {
-        text-align: center;
+        margin-bottom: 28px;
     }
 
     .layout3-team-member-name {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .layout3-team-member-credentials {
         font-size: 18px;
+    }
+
+    .layout3-team-member-quote {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .layout3-team-member-bio {
+        padding: 0 20px;
     }
 
     .layout3-contact {
