@@ -468,7 +468,7 @@
 
 /* Footer */
 .layout3-footer {
-    padding: 56px 80px;
+    padding: 56px 80px 40px;
     background: var(--ivory);
     border-top: 1px solid rgba(45, 49, 66, 0.1);
 }
@@ -479,6 +479,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .layout3-footer-logo {
@@ -492,6 +493,26 @@
     color: var(--slate);
     letter-spacing: 0.5px;
     font-weight: 500;
+}
+
+.layout3-footer-privacy {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(45, 49, 66, 0.06);
+}
+
+.layout3-footer-privacy-text {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--slate);
+    text-align: center;
+    opacity: 0.85;
+}
+
+.layout3-footer-privacy-text strong {
+    font-weight: 600;
+    color: var(--charcoal);
 }
 
 /* Responsive Design */
@@ -638,12 +659,20 @@
     }
 
     .layout3-footer {
-        padding: 48px 32px;
+        padding: 48px 32px 32px;
     }
 
     .layout3-footer-container {
         flex-direction: column;
         gap: 24px;
         text-align: center;
+    }
+
+    .layout3-footer-privacy {
+        padding: 24px 16px 0;
+    }
+
+    .layout3-footer-privacy-text {
+        font-size: 10px;
     }
 }

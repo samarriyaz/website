@@ -206,6 +206,15 @@ const Layout3 = () => {
           <img src="/IWP-LOGO.png" alt="Integrative Wellness Partners" className="layout3-footer-logo" />
           <div className="layout3-footer-text">Exclusive Concierge Medicine</div>
         </div>
+        <div className="layout3-footer-privacy">
+          <p className="layout3-footer-privacy-text">
+            <strong>SMS Privacy Policy:</strong> Integrative Wellness Partners respects your privacy.
+            We collect phone numbers only for appointment reminders and medical updates. Mobile information
+            will not be shared with third parties/affiliates for marketing/promotional purposes. All the
+            above categories exclude text messaging originator opt-in data and consent; this information
+            will not be shared with any third parties.
+          </p>
+        </div>
       </footer>
     </div>
   );
