@@ -207,7 +207,18 @@ const Layout3 = () => {
               <p className="layout3-team-member-credentials">Medical Office Coordinator</p>
               <div className="layout3-team-member-bio">
                 <p>
-                  Dawn is a dedicated member of our team, ensuring smooth operations and exceptional patient experiences.
+                  Dawn is the Medical Office Coordinator at Integrative Wellness Partners, specializing in accounting and human resources.
+                  She's known for helping patients and colleagues achieve the best possible results efficiently and with care.
+                </p>
+                <p>
+                  Dawn's passion for healthcare is deeply personal. Growing up with a mother who lived with Multiple Sclerosis sparked her
+                  desire to support others facing health challenges. She participates in the MS Walk annually and makes personal donations
+                  throughout the year—a commitment that remains close to her heart, especially when she reflects on how far treatment has
+                  come since her mother's diagnosis in the 1970s.
+                </p>
+                <p>
+                  Outside of work, Dawn is a devoted dog lover and advocate for animal welfare. She also prioritizes her own wellness through
+                  yoga and water aerobics, which keep her feeling balanced and ready to take on whatever challenges come her way.
                 </p>
               </div>
             </div>
