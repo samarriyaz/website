@@ -30,7 +30,7 @@ const Layout3 = () => {
     setFormStatus('sending');
 
     try {
-      const response = await fetch('https://formspree.io/f/Info@iwellnesspartners.com', {
+      const response = await fetch('https://formspree.io/f/xbdlyywa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
