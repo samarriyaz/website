@@ -73,7 +73,7 @@ export const content = {
   aboutDoctor: {
     name: "Dr. Samar Riaz, NMD",
     credentials: "Summa Cum Laude, Sonoran University of Health Sciences",
-    image: "/src/assets/doctor-placeholder.jpg", // Placeholder for now
+    image: "/dr-riaz-profile.jpeg",
     bio: [
       "Dr. Samar Riaz graduated with Summa Cum Laude honors from Sonoran University of Health Sciences in Tempe, Arizona. She always had a passion for medicine, but after a one-week rotation during her undergraduate studies at Riverside County Hospital, where she witnessed several young diabetic patients being admitted for complications, she saw the failure of a medical system lacking focus on prevention for these young patients.",
       "When she discovered naturopathic medicine, it intrigued her deeply to be able to provide truly integrative medicine to her patients, with a focus on their diet, exercise, and mental health, along with any necessary medications, specialists, and procedures. It was the best of both worlds for her as it gave her the knowledge to focus on preventative medicine but also the credentials to prescribe medications for patients as well.",
