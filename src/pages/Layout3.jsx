@@ -1,11 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Layout3.css';
 
 const Layout3 = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [formStatus, setFormStatus] = useState('');
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+
+    try {
+      const response = await fetch('https://formspree.io/f/Info@iwellnesspartners.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `New Membership Request from ${formData.name}`
+        })
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setFormStatus(''), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus(''), 5000);
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setTimeout(() => setFormStatus(''), 5000);
     }
   };
 
@@ -273,6 +323,91 @@ const Layout3 = () => {
               </div>
             </div>
           </div>
+
+          <form className="layout3-contact-form" onSubmit={handleSubmit}>
+            <h3 className="layout3-form-title">Request Membership</h3>
+            <p className="layout3-form-description">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+
+            <div className="layout3-form-row">
+              <div className="layout3-form-group">
+                <label htmlFor="name" className="layout3-form-label">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="layout3-form-input"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div className="layout3-form-group">
+                <label htmlFor="email" className="layout3-form-label">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="layout3-form-input"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div className="layout3-form-group">
+              <label htmlFor="phone" className="layout3-form-label">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="layout3-form-input"
+                placeholder="(555) 123-4567"
+              />
+            </div>
+
+            <div className="layout3-form-group">
+              <label htmlFor="message" className="layout3-form-label">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+                className="layout3-form-textarea"
+                placeholder="Tell us about your healthcare goals and any questions you may have..."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="layout3-form-submit"
+              disabled={formStatus === 'sending'}
+            >
+              {formStatus === 'sending' ? 'Sending...' : 'Submit Request'}
+            </button>
+
+            {formStatus === 'success' && (
+              <p className="layout3-form-message layout3-form-success">
+                Thank you for your message! We'll be in touch soon.
+              </p>
+            )}
+
+            {formStatus === 'error' && (
+              <p className="layout3-form-message layout3-form-error">
+                Something went wrong. Please try again or contact us directly.
+              </p>
+            )}
+          </form>
+
           <p className="layout3-contact-note">
             We look forward to building a lasting relationship focused on your optimal health.
           </p>
