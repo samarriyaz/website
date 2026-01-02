@@ -347,6 +347,21 @@
     top: 140px;
 }
 
+.layout3-physician-image-wrapper {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.layout3-physician-image {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid rgba(184, 132, 108, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    display: block;
+}
+
 .layout3-physician-name {
     font-size: 46px;
     margin-bottom: 18px;
@@ -593,6 +608,16 @@
 
     .layout3-physician {
         padding: 100px 32px;
+    }
+
+    .layout3-physician-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .layout3-physician-image-wrapper {
+        text-align: center;
+        margin-bottom: 32px;
     }
 
     .layout3-physician-name {
