@@ -199,25 +199,25 @@ const Layout3 = () => {
               </p>
               <div className="layout3-team-member-bio">
                 <p>
-                  Dr. Riaz's journey into naturopathic medicine began with a profound realization during her undergraduate
-                  studies: the medical system was failing young patients who lacked access to preventative care. After
-                  witnessing young diabetic patients admitted for preventable complications, she knew there had to be a better way.
+                  Dr. Riaz believes in being a strong advocate for her patients, going above and beyond for their well-being.
+                  She wants her patients to feel empowered and in control of their health. Her plans are focused on setting
+                  them up for success and not creating added stress. She emphasizes informed consent, providing all available
+                  treatment options to the best of her ability and respecting the patient's decisions. So, whether it is a
+                  breast cancer patient who chooses to refuse hormone blockers or to take them, her role as their physician
+                  is to support their decision and provide options to mitigate associated risks.
                 </p>
                 <p>
-                  <strong>Integrative medicine became that answer.</strong> It offered the best of both worlds—the ability
-                  to focus on diet, exercise, and mental health while maintaining the credentials to prescribe medications
-                  when needed. This approach allows her to provide truly comprehensive care.
+                  Most patients describe a close bond with Dr. Riaz, feeling heard and respected by her. Her years of
+                  experience working with children with developmental disorders have taught her to provide compassionate
+                  care to children who may be fearful of doctors.
                 </p>
                 <p>
-                  Her philosophy centers on <strong>informed consent and patient empowerment</strong>. Whether supporting
-                  a breast cancer patient's decision to take hormone blockers or helping families navigate developmental
-                  health challenges, Dr. Riaz provides options and respects autonomy.
+                  Dr. Riaz is happily married to her husband, a former professional MMA fighter of over 10 years. Being
+                  married to him has provided her with a different perspective on caring for patients under immense pressure,
+                  helping her to connect more deeply with her patients.
                 </p>
                 <p>
-                  Patients consistently describe feeling heard and respected. Her years working with children with
-                  developmental disorders have taught her to provide compassionate care to those who may be fearful.
-                  Her unique perspective—informed by her husband's decade-long career as a professional MMA fighter—has
-                  deepened her ability to care for patients under immense pressure.
+                  She looks forward to building relationships with new patients and helping them achieve their health goals.
                 </p>
               </div>
             </div>
