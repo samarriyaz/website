@@ -199,6 +199,16 @@ const Layout3 = () => {
               </p>
               <div className="layout3-team-member-bio">
                 <p>
+                  Dr. Riaz's journey into naturopathic medicine began with a profound realization during her undergraduate
+                  studies: the medical system was failing young patients who lacked access to preventative care. After
+                  witnessing young diabetic patients admitted for preventable complications, she knew there had to be a better way.
+                </p>
+                <p>
+                  Integrative medicine became that answer. It offered the best of both worlds—the ability to focus on diet,
+                  exercise, and mental health while maintaining the credentials to prescribe medications when needed. This
+                  approach allows her to provide truly comprehensive care.
+                </p>
+                <p>
                   Dr. Riaz believes in being a strong advocate for her patients, going above and beyond for their well-being.
                   She wants her patients to feel empowered and in control of their health. Her plans are focused on setting
                   them up for success and not creating added stress. She emphasizes informed consent, providing all available
