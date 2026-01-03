@@ -69,6 +69,7 @@ const Layout3 = () => {
           <ul className="layout3-nav-menu">
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
+            <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
           </ul>
         </div>
@@ -417,6 +418,11 @@ const Layout3 = () => {
       <footer className="layout3-footer">
         <div className="layout3-footer-container">
           <img src="/IWP-LOGO.png" alt="Integrative Wellness Partners" className="layout3-footer-logo" />
+          <div className="layout3-footer-supplements">
+            <a href="https://us.fullscript.com/welcome/iwellnesspartners?utm_medium=webreferral&utm_source=other&utm_campaign=abmwebbuttons_dark_728x90.svg&signup_source=website_buttons" target="_top">
+              <img src="https://assets.fullscript.com/buttons/dark_728x90.svg" alt="Order supplements through my Fullscript store." />
+            </a>
+          </div>
           <div className="layout3-footer-text">Exclusive Concierge Medicine</div>
         </div>
         <div className="layout3-footer-privacy">
