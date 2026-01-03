@@ -176,6 +176,20 @@ const Layout3 = () => {
         </div>
       </section>
 
+      <section className="layout3-supplements">
+        <div className="layout3-supplements-container">
+          <h2 className="layout3-supplements-title">Professional-Grade Supplements</h2>
+          <p className="layout3-supplements-description">
+            Access high-quality, physician-recommended supplements through our Fullscript dispensary.
+          </p>
+          <div className="layout3-supplements-button">
+            <a href="https://us.fullscript.com/welcome/iwellnesspartners?utm_medium=webreferral&utm_source=other&utm_campaign=abmwebbuttons_dark_728x90.svg&signup_source=website_buttons" target="_top">
+              <img src="https://assets.fullscript.com/buttons/dark_728x90.svg" alt="Order supplements through my Fullscript store." />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="layout3-team" id="team">
         <div className="layout3-team-header">
           <h2 className="layout3-section-title">Our Team</h2>
