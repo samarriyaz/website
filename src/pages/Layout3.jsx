@@ -70,6 +70,7 @@ const Layout3 = () => {
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
             <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
+            <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }}>Schedule</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
           </ul>
         </div>
@@ -428,6 +429,25 @@ const Layout3 = () => {
           <p className="layout3-contact-note">
             We look forward to building a lasting relationship focused on your optimal health.
           </p>
+        </div>
+      </section>
+
+      <section className="layout3-schedule" id="schedule">
+        <div className="layout3-schedule-container">
+          <h2>Schedule an Appointment</h2>
+          <p className="layout3-schedule-description">
+            Book your appointment directly using our online calendar.
+          </p>
+          <div className="layout3-schedule-iframe-wrapper">
+            <iframe
+              width="100%"
+              height="1000"
+              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=60327693697a78f4c8e92798dad7b53d78a235ead0c236cb35cb3b88ee8f8917405c8176170639bd366a2f0e9b3eedcedebf17855dc5f624"
+              style={{overflow: 'hidden'}}
+              frameBorder="0"
+              title="Schedule Appointment"
+            />
+          </div>
         </div>
       </section>
 
