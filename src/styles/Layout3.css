@@ -326,64 +326,105 @@
     font-weight: 400;
 }
 
-/* Physician Section */
-.layout3-physician {
+/* Team Section */
+.layout3-team {
     background: var(--deep-navy);
     color: var(--ivory);
     padding: 140px 80px;
 }
 
-.layout3-physician-container {
+.layout3-team-header {
     max-width: 1440px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.layout3-team-header .layout3-section-title {
+    color: var(--ivory);
+    margin-bottom: 24px;
+}
+
+.layout3-team-header .layout3-section-description {
+    color: rgba(250, 250, 249, 0.75);
+    max-width: 640px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 120px;
-    align-items: start;
 }
 
-.layout3-physician-info {
-    position: sticky;
-    top: 140px;
+.layout3-team-members {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
-.layout3-physician-name {
-    font-size: 46px;
-    margin-bottom: 18px;
+.layout3-team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.layout3-team-member-image-wrapper {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.layout3-team-member-image {
+    width: 360px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid rgba(184, 132, 108, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    display: block;
+}
+
+.layout3-team-member-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout3-team-member-name {
+    font-size: 42px;
+    margin-bottom: 12px;
     color: var(--ivory);
     letter-spacing: -0.5px;
+    font-family: 'Libre Baskerville', serif;
 }
 
-.layout3-physician-credentials {
-    font-size: 14px;
-    letter-spacing: 0.8px;
+.layout3-team-member-credentials {
+    font-size: 20px;
+    letter-spacing: 0.5px;
     color: var(--warm-stone);
-    margin-bottom: 40px;
-    font-weight: 500;
+    margin-bottom: 32px;
+    font-weight: 400;
 }
 
-.layout3-physician-quote {
+.layout3-team-member-quote {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
     line-height: 1.7;
     font-style: italic;
     color: var(--soft-copper);
-    padding-left: 28px;
-    border-left: 3px solid var(--soft-copper);
+    padding: 0 40px;
+    margin-bottom: 36px;
+    max-width: 700px;
 }
 
-.layout3-physician-bio {
-    font-size: 17px;
+.layout3-team-member-bio {
+    font-size: 16px;
     line-height: 1.85;
     color: rgba(250, 250, 249, 0.88);
     font-weight: 400;
+    max-width: 700px;
+    text-align: left;
 }
 
-.layout3-physician-bio p {
-    margin-bottom: 32px;
+.layout3-team-member-bio p {
+    margin-bottom: 28px;
 }
 
-.layout3-physician-bio strong {
+.layout3-team-member-bio strong {
     color: var(--ivory);
     font-weight: 600;
 }
@@ -451,9 +492,134 @@
     line-height: 1.7;
 }
 
+/* Contact Form */
+.layout3-contact-form {
+    max-width: 700px;
+    margin: 80px auto 60px;
+    padding: 60px;
+    background: white;
+    border: 2px solid rgba(184, 132, 108, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.layout3-form-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.layout3-form-description {
+    font-size: 16px;
+    color: var(--slate);
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.layout3-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.layout3-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.layout3-form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.layout3-form-input,
+.layout3-form-textarea {
+    padding: 14px 18px;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--charcoal);
+    background: var(--off-white);
+    border: 1.5px solid rgba(45, 49, 66, 0.15);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.layout3-form-input:focus,
+.layout3-form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-plum);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(184, 132, 108, 0.1);
+}
+
+.layout3-form-input::placeholder,
+.layout3-form-textarea::placeholder {
+    color: rgba(45, 49, 66, 0.4);
+}
+
+.layout3-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.layout3-form-submit {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--charcoal);
+    background: var(--accent-plum);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.layout3-form-submit:hover:not(:disabled) {
+    background: rgba(184, 132, 108, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184, 132, 108, 0.3);
+}
+
+.layout3-form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.layout3-form-message {
+    margin-top: 20px;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.layout3-form-success {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.layout3-form-error {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
 /* Footer */
 .layout3-footer {
-    padding: 56px 80px;
+    padding: 56px 80px 40px;
     background: var(--ivory);
     border-top: 1px solid rgba(45, 49, 66, 0.1);
 }
@@ -462,14 +628,40 @@
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .layout3-footer-logo {
     height: 44px;
     width: auto;
     opacity: 0.9;
+    flex-shrink: 0;
+}
+
+.layout3-footer-supplements {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.layout3-footer-supplements a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.layout3-footer-supplements a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.layout3-footer-supplements img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .layout3-footer-text {
@@ -477,6 +669,28 @@
     color: var(--slate);
     letter-spacing: 0.5px;
     font-weight: 500;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.layout3-footer-privacy {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(45, 49, 66, 0.06);
+}
+
+.layout3-footer-privacy-text {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--slate);
+    text-align: center;
+    opacity: 0.85;
+}
+
+.layout3-footer-privacy-text strong {
+    font-weight: 600;
+    color: var(--charcoal);
 }
 
 /* Responsive Design */
@@ -514,17 +728,12 @@
         row-gap: 70px;
     }
 
-    .layout3-physician {
+    .layout3-team {
         padding: 100px 50px;
     }
 
-    .layout3-physician-container {
-        grid-template-columns: 1fr;
-        gap: 70px;
-    }
-
-    .layout3-physician-info {
-        position: static;
+    .layout3-team-members {
+        gap: 80px;
     }
 
     .layout3-contact {
@@ -591,12 +800,42 @@
         row-gap: 60px;
     }
 
-    .layout3-physician {
+    .layout3-team {
         padding: 100px 32px;
     }
 
-    .layout3-physician-name {
-        font-size: 38px;
+    .layout3-team-header {
+        margin-bottom: 80px;
+    }
+
+    .layout3-team-members {
+        gap: 70px;
+    }
+
+    .layout3-team-member-image {
+        width: 300px;
+        height: auto;
+    }
+
+    .layout3-team-member-image-wrapper {
+        margin-bottom: 28px;
+    }
+
+    .layout3-team-member-name {
+        font-size: 32px;
+    }
+
+    .layout3-team-member-credentials {
+        font-size: 18px;
+    }
+
+    .layout3-team-member-quote {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .layout3-team-member-bio {
+        padding: 0 20px;
     }
 
     .layout3-contact {
@@ -612,13 +851,43 @@
         gap: 48px;
     }
 
+    .layout3-contact-form {
+        padding: 40px 28px;
+        margin: 60px auto 40px;
+    }
+
+    .layout3-form-title {
+        font-size: 26px;
+    }
+
+    .layout3-form-description {
+        font-size: 15px;
+    }
+
+    .layout3-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
     .layout3-footer {
-        padding: 48px 32px;
+        padding: 48px 32px 32px;
     }
 
     .layout3-footer-container {
         flex-direction: column;
         gap: 24px;
         text-align: center;
+    }
+
+    .layout3-footer-supplements img {
+        max-width: 90%;
+    }
+
+    .layout3-footer-privacy {
+        padding: 24px 16px 0;
+    }
+
+    .layout3-footer-privacy-text {
+        font-size: 10px;
     }
 }
