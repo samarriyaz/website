@@ -89,24 +89,6 @@ export const content = {
     ],
   },
 
-  // Team Members
-  team: {
-    title: "Meet Our Team",
-    subtitle: "Dedicated professionals committed to your health and wellbeing",
-    members: [
-      {
-        name: "Jay Bhatnagar",
-        role: "Medical Scribe",
-        image: "/jay-bhatnagar-profile.jpeg",
-        bio: [
-          "Jay is a Medical Scribe at Integrative Wellness Partners. He is a UCLA Neuroscience undergraduate student graduating in June 2026 and is on the pre-medical path, planning to specialize in a neuroscience-related field within medicine.",
-          "While his early exposure to healthcare through volunteering felt largely passive, Jay sought a more immersive clinical experience by becoming a medical scribe. Through this role, Jay has been more active in patient care, developing his familiarity with medical terminology, and gaining better exposure to patient cases in preparation for medical school and beyond.",
-          "Outside of work and college, Jay is heavily involved in researching about Alzheimer's Disease and Vascular Dementia. Additionally, his hobbies include hiking, gardening, and weightlifting.",
-        ],
-      },
-    ],
-  },
-
   // Pricing
   pricing: {
     title: "Simple, Transparent Pricing",
