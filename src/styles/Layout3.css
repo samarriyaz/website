@@ -630,42 +630,6 @@
     border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
-/* Schedule Section */
-.layout3-schedule {
-    background: var(--off-white);
-    padding: 120px 80px;
-}
-
-.layout3-schedule-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.layout3-schedule-container h2 {
-    font-size: 42px;
-    margin-bottom: 24px;
-    color: var(--deep-navy);
-    letter-spacing: -0.5px;
-}
-
-.layout3-schedule-description {
-    font-size: 18px;
-    color: var(--slate);
-    margin-bottom: 48px;
-    line-height: 1.6;
-}
-
-.layout3-schedule-iframe-wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
 /* Footer */
 .layout3-footer {
     padding: 56px 80px 40px;
@@ -783,10 +747,6 @@
 
     .layout3-team-members {
         gap: 80px;
-    }
-
-    .layout3-schedule {
-        padding: 100px 50px;
     }
 
     .layout3-contact {
@@ -920,23 +880,6 @@
     .layout3-form-row {
         grid-template-columns: 1fr;
         gap: 0;
-    }
-
-    .layout3-schedule {
-        padding: 100px 32px;
-    }
-
-    .layout3-schedule-container h2 {
-        font-size: 36px;
-    }
-
-    .layout3-schedule-description {
-        font-size: 16px;
-        margin-bottom: 36px;
-    }
-
-    .layout3-schedule-iframe-wrapper iframe {
-        height: 1200px;
     }
 
     .layout3-footer {
