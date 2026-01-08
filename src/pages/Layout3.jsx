@@ -442,7 +442,7 @@ const Layout3 = () => {
           <div className="layout3-schedule-iframe-wrapper">
             <iframe
               width="100%"
-              height="1000"
+              height="1500"
               src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=60327693697a78f4c8e92798dad7b53d78a235ead0c236cb35cb3b88ee8f8917405c8176170639bd366a2f0e9b3eedcedebf17855dc5f624"
               style={{overflow: 'hidden'}}
               frameBorder="0"
