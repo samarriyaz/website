@@ -71,6 +71,7 @@ const Layout3 = () => {
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
             <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
             <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }}>Schedule</a></li>
+            <li><a href="https://phr.charmtracker.com/login.sas?FACILITY_ID=9fac109f10b85efd7894ec671f64706360327693697a78f42e62fe42203ae47d67f706edca7cb6ea" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal">Patient Portal</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
           </ul>
         </div>
