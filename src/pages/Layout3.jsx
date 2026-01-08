@@ -295,7 +295,13 @@ const Layout3 = () => {
               <p className="layout3-team-member-credentials">Medical Scribe</p>
               <div className="layout3-team-member-bio">
                 <p>
-                  Jay provides essential support to our medical team, ensuring accurate and thorough documentation.
+                  Jay is a Medical Scribe at Integrative Wellness Partners. He is a UCLA Neuroscience undergraduate student graduating in June 2026 and is on the pre-medical path, planning to specialize in a neuroscience-related field within medicine.
+                </p>
+                <p>
+                  While his early exposure to healthcare through volunteering felt largely passive, Jay sought a more immersive clinical experience by becoming a medical scribe. Through this role, Jay has been more active in patient care, developing his familiarity with medical terminology, and gaining better exposure to patient cases in preparation for medical school and beyond.
+                </p>
+                <p>
+                  Outside of work and college, Jay is heavily involved in researching about Alzheimer's Disease and Vascular Dementia. Additionally, his hobbies include hiking, gardening, and weightlifting.
                 </p>
               </div>
             </div>
