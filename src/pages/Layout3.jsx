@@ -345,8 +345,8 @@ const Layout3 = () => {
               <div className="layout3-referral-label">Also Available</div>
               <h3 className="layout3-referral-title">Mobile IV Therapy</h3>
               <p className="layout3-referral-description">
-                Interested in IV therapy but not a member of our practice? Maggie Young, RN, BSN, offers mobile
-                infusions independently through The Valley Drip, delivered wherever you are.
+                Interested in IV therapy but not a member of our practice? Maggie Young, RN, BSN, brings infusions
+                to you through The Valley Drip, a separate mobile practice under Dr. Riaz's medical direction.
               </p>
             </div>
             <a
