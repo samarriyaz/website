@@ -257,7 +257,7 @@ const Layout3 = () => {
                   Outside of work, Maggie enjoys spending time with friends and family and coaches cheerleading at a local high school.
                 </p>
                 <p>
-                  Not a member of the practice but interested in IV therapy? Maggie also offers mobile infusions through{' '}
+                  Not a member of the practice but interested in IV therapy? Nurse Maggie also offers mobile infusions through{' '}
                   <a
                     href="https://thevalleydrip.com"
                     target="_blank"
