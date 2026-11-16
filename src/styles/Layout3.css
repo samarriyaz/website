@@ -49,6 +49,8 @@
     margin: 0 auto;
     padding: 0 80px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -68,8 +70,45 @@
     transform: scale(1.02);
 }
 
+.layout3-nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.layout3-nav-toggle-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--charcoal);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .layout3-nav-menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 16px;
     gap: 48px;
     list-style: none;
     align-items: center;
@@ -102,6 +141,29 @@
 
 .layout3-nav-menu a:hover::after {
     width: 100%;
+}
+
+.layout3-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 26px;
+    background: var(--deep-navy);
+    color: var(--ivory) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout3-nav-cta::after {
+    display: none;
+}
+
+.layout3-nav-cta:hover {
+    background: var(--accent-plum);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(91, 75, 138, 0.2);
 }
 
 .layout3-nav-portal {
@@ -413,6 +475,18 @@
     font-weight: 400;
 }
 
+.layout3-team-member-credentials-tight {
+    margin-bottom: 6px;
+}
+
+.layout3-team-member-role {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    color: var(--warm-stone);
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
 .layout3-team-member-quote {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
@@ -440,6 +514,19 @@
 .layout3-team-member-bio strong {
     color: var(--ivory);
     font-weight: 600;
+}
+
+.layout3-team-member-link {
+    color: var(--soft-copper);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 132, 108, 0.5);
+    transition: all 0.25s ease;
+}
+
+.layout3-team-member-link:hover {
+    color: var(--ivory);
+    border-bottom-color: var(--ivory);
 }
 
 /* Contact Section */
@@ -630,6 +717,78 @@
     border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
+/* Schedule */
+.layout3-schedule {
+    background: var(--ivory);
+    padding: 120px 80px;
+}
+
+.layout3-schedule-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.layout3-schedule-description {
+    font-size: 18px;
+    color: var(--slate);
+    max-width: 620px;
+    margin: 0 auto 56px;
+}
+
+.layout3-schedule-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.layout3-schedule-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 36px 36px 32px;
+    background: #FFFFFF;
+    border: 1px solid rgba(45, 49, 66, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout3-schedule-card:hover {
+    border-color: var(--accent-plum);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(91, 75, 138, 0.12);
+}
+
+.layout3-schedule-card-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--deep-navy);
+}
+
+.layout3-schedule-card-type {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: var(--slate);
+}
+
+.layout3-schedule-card-cta {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent-plum);
+}
+
+.layout3-schedule-card:hover .layout3-schedule-card-cta {
+    color: var(--soft-copper);
+}
+
+
 /* Footer */
 .layout3-footer {
     padding: 56px 80px 40px;
@@ -749,6 +908,10 @@
         gap: 80px;
     }
 
+    .layout3-schedule {
+        padding: 100px 50px;
+    }
+
     .layout3-contact {
         padding: 100px 50px;
     }
@@ -767,12 +930,63 @@
         height: 52px;
     }
 
+    .layout3-nav-container {
+        flex-wrap: nowrap;
+    }
+
+    .layout3-nav-toggle {
+        display: flex;
+    }
+
     .layout3-nav-menu {
-        gap: 28px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        row-gap: 0;
+        padding: 8px 32px 28px;
+        background: var(--ivory);
+        border-bottom: 1px solid rgba(45, 49, 66, 0.1);
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .layout3-nav-menu.is-open {
+        display: flex;
+    }
+
+    .layout3-nav-menu li {
+        border-bottom: 1px solid rgba(45, 49, 66, 0.08);
+    }
+
+    .layout3-nav-menu li:last-child {
+        border-bottom: none;
     }
 
     .layout3-nav-menu a {
-        font-size: 13px;
+        display: block;
+        padding: 18px 0;
+        font-size: 16px;
+    }
+
+    .layout3-nav-menu a::after {
+        display: none;
+    }
+
+    .layout3-nav-menu a.layout3-nav-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+
+    .layout3-nav-menu a.layout3-nav-cta:hover {
+        transform: none;
+        box-shadow: none;
     }
 
     .layout3-hero {
@@ -842,6 +1056,10 @@
         font-size: 18px;
     }
 
+    .layout3-team-member-role {
+        font-size: 15px;
+    }
+
     .layout3-team-member-quote {
         padding: 0 20px;
         font-size: 16px;
@@ -849,6 +1067,24 @@
 
     .layout3-team-member-bio {
         padding: 0 20px;
+    }
+
+    .layout3-schedule {
+        padding: 100px 32px;
+    }
+
+    .layout3-schedule-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .layout3-schedule-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .layout3-schedule-card {
+        padding: 28px 24px 26px;
     }
 
     .layout3-contact {

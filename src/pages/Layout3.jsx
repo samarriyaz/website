@@ -9,8 +9,10 @@ const Layout3 = () => {
     message: ''
   });
   const [formStatus, setFormStatus] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
+    setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -66,12 +68,25 @@ const Layout3 = () => {
           <div className="layout3-logo-container">
             <img src="/IWP-LOGO.png" alt="Integrative Wellness Partners" className="layout3-logo-image" />
           </div>
-          <ul className="layout3-nav-menu">
+          <button
+            type="button"
+            className={`layout3-nav-toggle${menuOpen ? ' is-open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+          >
+            <span className="layout3-nav-toggle-bar"></span>
+            <span className="layout3-nav-toggle-bar"></span>
+            <span className="layout3-nav-toggle-bar"></span>
+          </button>
+          <ul id="primary-navigation" className={`layout3-nav-menu${menuOpen ? ' is-open' : ''}`}>
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
-            <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
-            <li><a href="https://phr.charmtracker.com/login.sas?FACILITY_ID=9fac109f10b85efd7894ec671f64706360327693697a78f42e62fe42203ae47d67f706edca7cb6ea" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal">Patient Portal</a></li>
+            <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Supplements</a></li>
+            <li><a href="https://34522.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal" onClick={() => setMenuOpen(false)}>Patient Portal</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
+            <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }} className="layout3-nav-cta">Schedule</a></li>
           </ul>
         </div>
       </nav>
@@ -255,58 +270,102 @@ const Layout3 = () => {
                 <p>
                   Outside of work, Maggie enjoys spending time with friends and family and coaches cheerleading at a local high school.
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Dawn Williams */}
-          <div className="layout3-team-member">
-            <div className="layout3-team-member-image-wrapper">
-              <img src="/dawn-williams-profile.jpeg" alt="Dawn Williams, Medical Office Coordinator" className="layout3-team-member-image" />
-            </div>
-            <div className="layout3-team-member-content">
-              <h3 className="layout3-team-member-name">Dawn Williams</h3>
-              <p className="layout3-team-member-credentials">Medical Office Coordinator</p>
-              <div className="layout3-team-member-bio">
                 <p>
-                  Dawn is the Medical Office Coordinator at Integrative Wellness Partners, specializing in accounting and human resources.
-                  She's known for helping patients and colleagues achieve the best possible results efficiently and with care.
-                </p>
-                <p>
-                  Dawn's passion for healthcare is deeply personal. Growing up with a mother who lived with Multiple Sclerosis sparked her
-                  desire to support others facing health challenges. She participates in the MS Walk annually and makes personal donations
-                  throughout the year—a commitment that remains close to her heart, especially when she reflects on how far treatment has
-                  come since her mother's diagnosis in the 1970s.
-                </p>
-                <p>
-                  Outside of work, Dawn is a devoted dog lover and advocate for animal welfare. She also prioritizes her own wellness through
-                  yoga and water aerobics, which keep her feeling balanced and ready to take on whatever challenges come her way.
+                  Not a member of the practice but interested in IV therapy? Nurse Maggie also offers mobile infusions through{' '}
+                  <a
+                    href="https://thevalleydrip.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="layout3-team-member-link"
+                  >
+                    The Valley Drip
+                  </a>.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Jay Bhatnagar */}
+          {/* Dr. Bashar Javed Khan */}
           <div className="layout3-team-member">
             <div className="layout3-team-member-image-wrapper">
-              <img src="/jay-bhatnagar-profile.jpeg" alt="Jay Bhatnagar, Medical Scribe" className="layout3-team-member-image" />
+              <img src="/bashar-khan-profile.jpg" alt="Dr. Bashar Javed Khan, MBBS" className="layout3-team-member-image" />
             </div>
             <div className="layout3-team-member-content">
-              <h3 className="layout3-team-member-name">Jay Bhatnagar</h3>
-              <p className="layout3-team-member-credentials">Medical Scribe</p>
+              <h3 className="layout3-team-member-name">Dr. Bashar Javed Khan</h3>
+              <p className="layout3-team-member-credentials layout3-team-member-credentials-tight">MBBS</p>
+              <p className="layout3-team-member-role">Medical Assistant and Patient Care Coordinator</p>
               <div className="layout3-team-member-bio">
                 <p>
-                  Jay is a Medical Scribe at Integrative Wellness Partners. He is a UCLA Neuroscience undergraduate student graduating in June 2026 and is on the pre-medical path, planning to specialize in a neuroscience-related field within medicine.
+                  Dr. Bashar Javed Khan is a foreign medical graduate committed to thoughtful, personalized, and accessible
+                  healthcare. He earned his MBBS from Al Nafees Medical College, ISRA University, Pakistan, and completed his
+                  house job at Capital Hospital, CDA, gaining experience across General Medicine, Pediatrics, Surgery, and
+                  Ophthalmology. His clinical training shaped his belief that quality care begins with understanding each
+                  patient as an individual, listening to their concerns, and making sure they feel supported throughout their
+                  healthcare journey.
                 </p>
                 <p>
-                  While his early exposure to healthcare through volunteering felt largely passive, Jay sought a more immersive clinical experience by becoming a medical scribe. Through this role, Jay has been more active in patient care, developing his familiarity with medical terminology, and gaining better exposure to patient cases in preparation for medical school and beyond.
+                  His attention to detail and his desire to support truly individualized care drew him to Integrative Wellness
+                  Partners. The practice's concierge integrative model, built on time, access, and whole-person care, lets him
+                  combine his medical training with his experience in digital healthcare and patient support. He is especially
+                  interested in how technology can improve access to care, strengthen communication, and keep patients
+                  connected with their care team, while preserving the personal connection at the heart of medicine.
                 </p>
                 <p>
-                  Outside of work and college, Jay is heavily involved in researching about Alzheimer's Disease and Vascular Dementia. Additionally, his hobbies include hiking, gardening, and weightlifting.
+                  As Patient Care Coordinator, Dr. Bashar is a steady point of connection for patients throughout their care.
+                  He helps make sure communication, coordination, and continuity of care are seamless. He works to ensure every
+                  patient feels heard, informed, and confident in their care, and he helps deliver an experience that combines
+                  clinical knowledge, compassionate relationships, and thoughtful use of technology to make high-quality,
+                  patient-centered care more accessible.
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="layout3-schedule" id="schedule">
+        <div className="layout3-schedule-container">
+          <div className="layout3-section-label">Appointments</div>
+          <h2 className="layout3-section-title">Book an Appointment</h2>
+          <p className="layout3-schedule-description">
+            Choose the visit you need and pick a time that works for you. Scheduling opens in a new tab.
+          </p>
+
+          <div className="layout3-schedule-options">
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Dr. Samar Riaz, NMD</span>
+              <span className="layout3-schedule-card-type">Physician visit</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
+
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Maggie Young, RN, BSN</span>
+              <span className="layout3-schedule-card-type">Nurse visit</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
+
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Lab Work</span>
+              <span className="layout3-schedule-card-type">Blood draw</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
