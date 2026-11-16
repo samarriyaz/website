@@ -49,6 +49,8 @@
     margin: 0 auto;
     padding: 0 80px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -70,6 +72,9 @@
 
 .layout3-nav-menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 16px;
     gap: 48px;
     list-style: none;
     align-items: center;
@@ -102,6 +107,29 @@
 
 .layout3-nav-menu a:hover::after {
     width: 100%;
+}
+
+.layout3-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 26px;
+    background: var(--deep-navy);
+    color: var(--ivory) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout3-nav-cta::after {
+    display: none;
+}
+
+.layout3-nav-cta:hover {
+    background: var(--accent-plum);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(91, 75, 138, 0.2);
 }
 
 .layout3-nav-portal {
@@ -843,11 +871,16 @@
     }
 
     .layout3-nav-menu {
-        gap: 28px;
+        gap: 20px;
+        row-gap: 12px;
     }
 
     .layout3-nav-menu a {
         font-size: 13px;
+    }
+
+    .layout3-nav-cta {
+        padding: 10px 20px;
     }
 
     .layout3-hero {

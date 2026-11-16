@@ -70,9 +70,9 @@ const Layout3 = () => {
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
             <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
-            <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }}>Schedule</a></li>
             <li><a href="https://34522.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal">Patient Portal</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
+            <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }} className="layout3-nav-cta">Schedule</a></li>
           </ul>
         </div>
       </nav>
