@@ -278,7 +278,8 @@ const Layout3 = () => {
             </div>
             <div className="layout3-team-member-content">
               <h3 className="layout3-team-member-name">Dr. Bashar Javed Khan</h3>
-              <p className="layout3-team-member-credentials">MBBS — Medical Assistant and Patient Care Coordinator</p>
+              <p className="layout3-team-member-credentials layout3-team-member-credentials-tight">MBBS</p>
+              <p className="layout3-team-member-role">Medical Assistant and Patient Care Coordinator</p>
               <div className="layout3-team-member-bio">
                 <p>
                   Dr. Bashar Javed Khan is a foreign medical graduate committed to thoughtful, personalized, and accessible

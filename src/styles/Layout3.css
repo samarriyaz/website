@@ -441,6 +441,18 @@
     font-weight: 400;
 }
 
+.layout3-team-member-credentials-tight {
+    margin-bottom: 6px;
+}
+
+.layout3-team-member-role {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    color: var(--warm-stone);
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
 .layout3-team-member-quote {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
@@ -962,6 +974,10 @@
 
     .layout3-team-member-credentials {
         font-size: 18px;
+    }
+
+    .layout3-team-member-role {
+        font-size: 15px;
     }
 
     .layout3-team-member-quote {
