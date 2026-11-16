@@ -258,6 +258,41 @@ const Layout3 = () => {
               </div>
             </div>
           </div>
+
+          {/* Dr. Bashar Javed Khan */}
+          <div className="layout3-team-member">
+            <div className="layout3-team-member-image-wrapper">
+              <img src="/bashar-khan-profile.jpg" alt="Dr. Bashar Javed Khan, MBBS" className="layout3-team-member-image" />
+            </div>
+            <div className="layout3-team-member-content">
+              <h3 className="layout3-team-member-name">Dr. Bashar Javed Khan</h3>
+              <p className="layout3-team-member-credentials">MBBS — Medical Assistant and Patient Care Coordinator</p>
+              <div className="layout3-team-member-bio">
+                <p>
+                  Dr. Bashar Javed Khan is a foreign medical graduate committed to thoughtful, personalized, and accessible
+                  healthcare. He earned his MBBS from Al Nafees Medical College, ISRA University, Pakistan, and completed his
+                  house job at Capital Hospital, CDA, gaining experience across General Medicine, Pediatrics, Surgery, and
+                  Ophthalmology. His clinical training shaped his belief that quality care begins with understanding each
+                  patient as an individual, listening to their concerns, and making sure they feel supported throughout their
+                  healthcare journey.
+                </p>
+                <p>
+                  His attention to detail and his desire to support truly individualized care drew him to Integrative Wellness
+                  Partners. The practice's concierge integrative model, built on time, access, and whole-person care, lets him
+                  combine his medical training with his experience in digital healthcare and patient support. He is especially
+                  interested in how technology can improve access to care, strengthen communication, and keep patients
+                  connected with their care team, while preserving the personal connection at the heart of medicine.
+                </p>
+                <p>
+                  As Patient Care Coordinator, Dr. Bashar is a steady point of connection for patients throughout their care.
+                  He helps make sure communication, coordination, and continuity of care are seamless. He works to ensure every
+                  patient feels heard, informed, and confident in their care, and he helps deliver an experience that combines
+                  clinical knowledge, compassionate relationships, and thoughtful use of technology to make high-quality,
+                  patient-centered care more accessible.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
