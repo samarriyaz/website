@@ -256,6 +256,17 @@ const Layout3 = () => {
                 <p>
                   Outside of work, Maggie enjoys spending time with friends and family and coaches cheerleading at a local high school.
                 </p>
+                <p>
+                  Not a member of the practice but interested in IV therapy? Maggie also offers mobile infusions through{' '}
+                  <a
+                    href="https://thevalleydrip.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="layout3-team-member-link"
+                  >
+                    The Valley Drip
+                  </a>.
+                </p>
               </div>
             </div>
           </div>
@@ -340,24 +351,6 @@ const Layout3 = () => {
             </a>
           </div>
 
-          <div className="layout3-referral">
-            <div className="layout3-referral-text">
-              <div className="layout3-referral-label">Also Available</div>
-              <h3 className="layout3-referral-title">Mobile IV Therapy</h3>
-              <p className="layout3-referral-description">
-                Interested in IV therapy but not a member of our practice? Maggie Young, RN, BSN, brings infusions
-                to you through The Valley Drip, a separate mobile practice under Dr. Riaz's medical direction.
-              </p>
-            </div>
-            <a
-              href="https://thevalleydrip.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="layout3-referral-link"
-            >
-              Visit The Valley Drip
-            </a>
-          </div>
         </div>
       </section>
 
