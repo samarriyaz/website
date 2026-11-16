@@ -339,6 +339,25 @@ const Layout3 = () => {
               <span className="layout3-schedule-card-cta">Schedule</span>
             </a>
           </div>
+
+          <div className="layout3-referral">
+            <div className="layout3-referral-text">
+              <div className="layout3-referral-label">Also Available</div>
+              <h3 className="layout3-referral-title">Mobile IV Therapy</h3>
+              <p className="layout3-referral-description">
+                Interested in IV therapy but not a member of our practice? Maggie Young, RN, BSN, offers mobile
+                infusions independently through The Valley Drip, delivered wherever you are.
+              </p>
+            </div>
+            <a
+              href="https://thevalleydrip.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-referral-link"
+            >
+              Visit The Valley Drip
+            </a>
+          </div>
         </div>
       </section>
 

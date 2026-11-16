@@ -729,6 +729,62 @@
     color: var(--soft-copper);
 }
 
+.layout3-referral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 64px;
+    padding: 36px 40px;
+    text-align: left;
+    background: rgba(184, 132, 108, 0.06);
+    border: 1px solid rgba(184, 132, 108, 0.25);
+    border-radius: 8px;
+}
+
+.layout3-referral-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--soft-copper);
+    margin-bottom: 10px;
+}
+
+.layout3-referral-title {
+    font-size: 24px;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.layout3-referral-description {
+    font-size: 16px;
+    color: var(--slate);
+    max-width: 620px;
+    margin: 0;
+}
+
+.layout3-referral-link {
+    flex-shrink: 0;
+    padding: 14px 28px;
+    border: 1px solid var(--soft-copper);
+    border-radius: 4px;
+    color: var(--soft-copper);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout3-referral-link:hover {
+    background: var(--soft-copper);
+    color: var(--ivory);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(184, 132, 108, 0.22);
+}
+
 /* Footer */
 .layout3-footer {
     padding: 56px 80px 40px;
@@ -975,6 +1031,27 @@
 
     .layout3-schedule-card {
         padding: 28px 24px 26px;
+    }
+
+    .layout3-referral {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-top: 48px;
+        padding: 28px 24px;
+    }
+
+    .layout3-referral-title {
+        font-size: 21px;
+    }
+
+    .layout3-referral-description {
+        font-size: 15px;
+    }
+
+    .layout3-referral-link {
+        align-self: stretch;
+        text-align: center;
     }
 
     .layout3-contact {
