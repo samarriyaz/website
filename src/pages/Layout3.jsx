@@ -258,55 +258,6 @@ const Layout3 = () => {
               </div>
             </div>
           </div>
-
-          {/* Dawn Williams */}
-          <div className="layout3-team-member">
-            <div className="layout3-team-member-image-wrapper">
-              <img src="/dawn-williams-profile.jpeg" alt="Dawn Williams, Medical Office Coordinator" className="layout3-team-member-image" />
-            </div>
-            <div className="layout3-team-member-content">
-              <h3 className="layout3-team-member-name">Dawn Williams</h3>
-              <p className="layout3-team-member-credentials">Medical Office Coordinator</p>
-              <div className="layout3-team-member-bio">
-                <p>
-                  Dawn is the Medical Office Coordinator at Integrative Wellness Partners, specializing in accounting and human resources.
-                  She's known for helping patients and colleagues achieve the best possible results efficiently and with care.
-                </p>
-                <p>
-                  Dawn's passion for healthcare is deeply personal. Growing up with a mother who lived with Multiple Sclerosis sparked her
-                  desire to support others facing health challenges. She participates in the MS Walk annually and makes personal donations
-                  throughout the year—a commitment that remains close to her heart, especially when she reflects on how far treatment has
-                  come since her mother's diagnosis in the 1970s.
-                </p>
-                <p>
-                  Outside of work, Dawn is a devoted dog lover and advocate for animal welfare. She also prioritizes her own wellness through
-                  yoga and water aerobics, which keep her feeling balanced and ready to take on whatever challenges come her way.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Jay Bhatnagar */}
-          <div className="layout3-team-member">
-            <div className="layout3-team-member-image-wrapper">
-              <img src="/jay-bhatnagar-profile.jpeg" alt="Jay Bhatnagar, Medical Scribe" className="layout3-team-member-image" />
-            </div>
-            <div className="layout3-team-member-content">
-              <h3 className="layout3-team-member-name">Jay Bhatnagar</h3>
-              <p className="layout3-team-member-credentials">Medical Scribe</p>
-              <div className="layout3-team-member-bio">
-                <p>
-                  Jay is a Medical Scribe at Integrative Wellness Partners. He is a UCLA Neuroscience undergraduate student graduating in June 2026 and is on the pre-medical path, planning to specialize in a neuroscience-related field within medicine.
-                </p>
-                <p>
-                  While his early exposure to healthcare through volunteering felt largely passive, Jay sought a more immersive clinical experience by becoming a medical scribe. Through this role, Jay has been more active in patient care, developing his familiarity with medical terminology, and gaining better exposure to patient cases in preparation for medical school and beyond.
-                </p>
-                <p>
-                  Outside of work and college, Jay is heavily involved in researching about Alzheimer's Disease and Vascular Dementia. Additionally, his hobbies include hiking, gardening, and weightlifting.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
