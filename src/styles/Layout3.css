@@ -70,6 +70,40 @@
     transform: scale(1.02);
 }
 
+.layout3-nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.layout3-nav-toggle-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--charcoal);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.layout3-nav-toggle.is-open .layout3-nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .layout3-nav-menu {
     display: flex;
     flex-wrap: wrap;
@@ -896,17 +930,63 @@
         height: 52px;
     }
 
+    .layout3-nav-container {
+        flex-wrap: nowrap;
+    }
+
+    .layout3-nav-toggle {
+        display: flex;
+    }
+
     .layout3-nav-menu {
-        gap: 20px;
-        row-gap: 12px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        row-gap: 0;
+        padding: 8px 32px 28px;
+        background: var(--ivory);
+        border-bottom: 1px solid rgba(45, 49, 66, 0.1);
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .layout3-nav-menu.is-open {
+        display: flex;
+    }
+
+    .layout3-nav-menu li {
+        border-bottom: 1px solid rgba(45, 49, 66, 0.08);
+    }
+
+    .layout3-nav-menu li:last-child {
+        border-bottom: none;
     }
 
     .layout3-nav-menu a {
-        font-size: 13px;
+        display: block;
+        padding: 18px 0;
+        font-size: 16px;
     }
 
-    .layout3-nav-cta {
-        padding: 10px 20px;
+    .layout3-nav-menu a::after {
+        display: none;
+    }
+
+    .layout3-nav-menu a.layout3-nav-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+
+    .layout3-nav-menu a.layout3-nav-cta:hover {
+        transform: none;
+        box-shadow: none;
     }
 
     .layout3-hero {

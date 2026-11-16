@@ -9,8 +9,10 @@ const Layout3 = () => {
     message: ''
   });
   const [formStatus, setFormStatus] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
+    setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -66,11 +68,23 @@ const Layout3 = () => {
           <div className="layout3-logo-container">
             <img src="/IWP-LOGO.png" alt="Integrative Wellness Partners" className="layout3-logo-image" />
           </div>
-          <ul className="layout3-nav-menu">
+          <button
+            type="button"
+            className={`layout3-nav-toggle${menuOpen ? ' is-open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+          >
+            <span className="layout3-nav-toggle-bar"></span>
+            <span className="layout3-nav-toggle-bar"></span>
+            <span className="layout3-nav-toggle-bar"></span>
+          </button>
+          <ul id="primary-navigation" className={`layout3-nav-menu${menuOpen ? ' is-open' : ''}`}>
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
-            <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
-            <li><a href="https://34522.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal">Patient Portal</a></li>
+            <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Supplements</a></li>
+            <li><a href="https://34522.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal" onClick={() => setMenuOpen(false)}>Patient Portal</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
             <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }} className="layout3-nav-cta">Schedule</a></li>
           </ul>
