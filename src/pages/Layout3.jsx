@@ -70,6 +70,7 @@ const Layout3 = () => {
             <li><a href="#approach" onClick={(e) => { e.preventDefault(); scrollToSection('approach'); }}>Our Approach</a></li>
             <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>Our Team</a></li>
             <li><a href="https://us.fullscript.com/welcome/iwellnesspartners" target="_blank" rel="noopener noreferrer">Supplements</a></li>
+            <li><a href="#schedule" onClick={(e) => { e.preventDefault(); scrollToSection('schedule'); }}>Schedule</a></li>
             <li><a href="https://phr.charmtracker.com/login.sas?FACILITY_ID=9fac109f10b85efd7894ec671f64706360327693697a78f42e62fe42203ae47d67f706edca7cb6ea" target="_blank" rel="noopener noreferrer" className="layout3-nav-portal">Patient Portal</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Connect</a></li>
           </ul>
@@ -292,6 +293,40 @@ const Layout3 = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="layout3-schedule" id="schedule">
+        <div className="layout3-schedule-container">
+          <div className="layout3-section-label">Appointments</div>
+          <h2 className="layout3-section-title">Book an Appointment</h2>
+          <p className="layout3-schedule-description">
+            Choose the visit you need and pick a time that works for you. Scheduling opens in a new tab.
+          </p>
+
+          <div className="layout3-schedule-options">
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Dr. Samar Riaz, NMD</span>
+              <span className="layout3-schedule-card-type">Physician visit</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
+
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Maggie Young, RN, BSN</span>
+              <span className="layout3-schedule-card-type">Nurse visit</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
           </div>
         </div>
       </section>
