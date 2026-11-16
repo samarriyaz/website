@@ -327,6 +327,17 @@ const Layout3 = () => {
               <span className="layout3-schedule-card-type">Nurse visit</span>
               <span className="layout3-schedule-card-cta">Schedule</span>
             </a>
+
+            <a
+              href="https://consumer.scheduling.athena.io/?locationId=34522-1&practitionerId=34522-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="layout3-schedule-card"
+            >
+              <span className="layout3-schedule-card-name">Lab Work</span>
+              <span className="layout3-schedule-card-type">Blood draw</span>
+              <span className="layout3-schedule-card-cta">Schedule</span>
+            </a>
           </div>
         </div>
       </section>
